@@ -1,0 +1,36 @@
+.AppContainer {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.AppSidebar {
+  flex: 0 0 7rem;
+  background-color: white;
+  border-right: 1px solid #eee;
+}
+
+.AppMain {
+  flex: 1 1 auto;
+  background-color: snow;
+}
+
+.AppMain .AppHeader {
+  padding: 1rem;
+  background-color: white;
+  font-size: large;
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+/* media queries for small screens */
+@media (max-width: 600px) {
+  .AppContainer {
+    flex-direction: column;
+  }
+
+  .AppSidebar {
+    display: none;
+  }
+}
