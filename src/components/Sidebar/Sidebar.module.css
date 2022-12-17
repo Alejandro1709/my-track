@@ -3,3 +3,9 @@
   background-color: white;
   border-right: 1px solid #eee;
 }
+
+@media (max-width: 600px) {
+  .AppSidebar {
+    display: none;
+  }
+}

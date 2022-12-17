@@ -3,3 +3,9 @@
   flex-direction: row;
   min-height: 100vh;
 }
+
+@media (max-width: 600px) {
+  .AppContainer {
+    flex-direction: column;
+  }
+}
