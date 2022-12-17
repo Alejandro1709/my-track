@@ -1,20 +1,3 @@
 .Window {
   flex: 1 0 0;
 }
-
-.List {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(276px, 1fr));
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.ListItem {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 205px;
-  background-color: lightblue;
-}
