@@ -12,7 +12,11 @@ function ListItem({ course }: ListItemProps) {
 
   return (
     <li
-      className={styles.ListItem}
+      className={
+        course.status === 'completed'
+          ? styles.ListItem
+          : styles.ListItem__incomplete
+      }
       style={{ backgroundColor: renderCourseColor(course) }}
       role='listitem'
     >

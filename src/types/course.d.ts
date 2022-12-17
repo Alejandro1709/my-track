@@ -11,7 +11,14 @@ export default interface ICourse {
 export type CourseType =
   | 'Ciencias Básicas'
   | 'Humanidades'
-  | 'Ciencias de la Computación';
+  | 'Ciencias de la Computación'
+  | 'Administración'
+  | 'Ingeniería de Software'
+  | 'Tecnologías de Información'
+  | 'Práctica de la Profesión'
+  | 'Electivo'
+  | 'Otro';
+
 export type CourseColor = { hex: string; name: string };
 
 export type CourseStatus =
