@@ -4,6 +4,11 @@
   border-right: 1px solid #eee;
 }
 
+.SidebarInner {
+  padding: 1rem;
+  background-color: lavenderblush;
+}
+
 @media (max-width: 600px) {
   .Sidebar {
     display: none;
