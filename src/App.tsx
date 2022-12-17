@@ -1,14 +1,16 @@
 import AppContainer from './components/AppContainer';
 import Sidebar from './components/Sidebar';
-import styles from './App.module.css';
+import Main from './components/Main';
+import Header from './components/Header';
 
 function App() {
   return (
     <AppContainer>
       <Sidebar />
-      <main className={styles.AppMain}>
-        <header className={styles.AppHeader}>Ingeniería de software</header>
-      </main>
+      <Main>
+        <Header />
+        dkffk
+      </Main>
     </AppContainer>
   );
 }

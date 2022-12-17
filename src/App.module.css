@@ -1,17 +1,3 @@
-.AppMain {
-  flex: 1 1 auto;
-  background-color: snow;
-}
-
-.AppMain .AppHeader {
-  padding: 1rem;
-  background-color: white;
-  font-size: large;
-  font-weight: 600;
-  text-align: center;
-  border-bottom: 1px solid #eee;
-}
-
 /* media queries for small screens */
 @media (max-width: 600px) {
   .AppContainer {

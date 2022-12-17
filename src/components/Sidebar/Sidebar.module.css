@@ -5,7 +5,7 @@
 }
 
 @media (max-width: 600px) {
-  .AppSidebar {
+  .Sidebar {
     display: none;
   }
 }
