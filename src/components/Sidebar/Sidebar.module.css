@@ -31,6 +31,8 @@
   display: flex;
   justify-content: center;
   font-size: 1.8rem;
+  /* border: none;
+  background: transparent; */
   transition: all 0.1s ease-in-out;
   cursor: pointer;
 }
@@ -40,8 +42,46 @@
   color: #176dc9;
 }
 
+.SidebarFilterBar {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  gap: 10px;
+  top: 50px;
+  left: 80px;
+  width: 400px;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.SidebarSelect {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 0.2rem;
+  flex: 1;
+}
+
+.SidebarApply {
+  border: none;
+  background: #176dc9;
+  color: white;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+}
+
+.SidebarApply:hover {
+  background: #0d4e8c;
+}
+
 @media (max-width: 600px) {
   .Sidebar {
+    display: none;
+  }
+  .SidebarFilterBar {
     display: none;
   }
 }
