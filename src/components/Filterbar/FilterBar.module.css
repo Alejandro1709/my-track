@@ -1,0 +1,40 @@
+.FilterBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  gap: 10px;
+  top: 3.125rem;
+  left: 5rem;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.Select {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 0.2rem;
+  flex: 1;
+}
+
+.Apply {
+  border: none;
+  background: #176dc9;
+  color: white;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+}
+
+.Apply:hover {
+  background: #0d4e8c;
+}
+
+@media (max-width: 600px) {
+  .FilterBar {
+    display: none;
+  }
+}

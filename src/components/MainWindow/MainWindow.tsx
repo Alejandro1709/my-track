@@ -4,10 +4,10 @@ import List from '../List';
 import styles from './MainWindow.module.css';
 
 function MainWindow() {
-  const { courses } = useContext(CoursesContext);
+  const { filteredCourses } = useContext(CoursesContext);
   return (
     <div className={styles.Window}>
-      <List courses={courses} />
+      <List courses={filteredCourses} />
     </div>
   );
 }

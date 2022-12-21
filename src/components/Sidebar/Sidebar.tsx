@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AiFillFilter, AiOutlineGroup } from 'react-icons/ai';
+import FilterBar from '../Filterbar';
 import styles from './Sidebar.module.css';
 
 function Sidebar() {
@@ -7,20 +8,13 @@ function Sidebar() {
 
   function handleFilterClick() {
     setIsFilterOpen(!isFilterOpen);
-    console.log('filter');
   }
 
   return (
     <aside className={styles.Sidebar}>
-      <div className={styles.SidebarFilterBar}>
-        <select className={styles.SidebarSelect} name='filter' id='filter'>
-          <option value='all'>All</option>
-          <option value='type'>Type</option>
-          <option value='status'>Status</option>
-          <option value='credits'>Credits</option>
-        </select>
-        <button className={styles.SidebarApply}>Apply</button>
-      </div>
+      {isFilterOpen ? (
+        <FilterBar onFilterApply={() => setIsFilterOpen(false)} />
+      ) : null}
       <div className={styles.SidebarInner}>
         <div className={styles.SidebarLogo}>LOGO</div>
         <div className={styles.SidebarActions}>
