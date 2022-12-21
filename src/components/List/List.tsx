@@ -1,8 +1,12 @@
-import { courses } from '../../data';
 import ListItem from '../ListItem';
+import type ICourse from '../../types/course';
 import styles from './List.module.css';
 
-function List() {
+type ListProps = {
+  courses: ICourse[];
+};
+
+function List({ courses }: ListProps) {
   return (
     <ul className={styles.List} role='list'>
       {courses.map((course) => (
