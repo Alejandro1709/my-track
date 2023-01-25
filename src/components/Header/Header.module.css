@@ -1,8 +1,9 @@
 .Header {
   padding: 1rem;
-  background-color: white;
-  font-size: large;
+  background-color: #444141;
+  font-size: x-large;
   font-weight: 600;
+  color: white;
   text-align: center;
-  border-bottom: 1px solid #eee;
+  /* border-bottom: 1px solid #eee; */
 }

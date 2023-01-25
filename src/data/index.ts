@@ -1,4 +1,5 @@
 import type ICourse from '../types/course';
+import { type ITerm } from '../types/course';
 
 export const courses: ICourse[] = [
   {
@@ -116,7 +117,7 @@ export const courses: ICourse[] = [
     color: { hex: '#A3D39C', name: 'green' },
     credits: 6,
     semester: 3,
-    status: 'in-progress',
+    status: 'completed',
   },
   {
     id: 14,
@@ -421,7 +422,7 @@ export const courses: ICourse[] = [
     type: 'Electivo',
     color: { hex: '#EBEDEF', name: 'lightGray' },
     credits: 4,
-    semester: 9,
+    semester: 10,
     status: 'not-started',
   },
   {
@@ -430,7 +431,7 @@ export const courses: ICourse[] = [
     type: 'Electivo',
     color: { hex: '#EBEDEF', name: 'lightGray' },
     credits: 4,
-    semester: 9,
+    semester: 10,
     status: 'not-started',
   },
   {
@@ -439,7 +440,7 @@ export const courses: ICourse[] = [
     type: 'Electivo',
     color: { hex: '#EBEDEF', name: 'lightGray' },
     credits: 4,
-    semester: 9,
+    semester: 10,
     status: 'not-started',
   },
   {
@@ -448,7 +449,70 @@ export const courses: ICourse[] = [
     type: 'Electivo',
     color: { hex: '#EBEDEF', name: 'lightGray' },
     credits: 4,
-    semester: 9,
+    semester: 10,
     status: 'not-started',
+  },
+];
+
+export const terms: ITerm[] = [
+  {
+    id: 0,
+    name: 'Ciclo 1',
+    slug: 'ciclo-1',
+    courses: courses.filter((course) => course.semester === 1),
+  },
+  {
+    id: 1,
+    name: 'Ciclo 2',
+    slug: 'ciclo-2',
+    courses: courses.filter((course) => course.semester === 2),
+  },
+  {
+    id: 2,
+    name: 'Ciclo 3',
+    slug: 'ciclo-3',
+    courses: courses.filter((course) => course.semester === 3),
+  },
+  {
+    id: 3,
+    name: 'Ciclo 4',
+    slug: 'ciclo-4',
+    courses: courses.filter((course) => course.semester === 4),
+  },
+  {
+    id: 4,
+    name: 'Ciclo 5',
+    slug: 'ciclo-5',
+    courses: courses.filter((course) => course.semester === 5),
+  },
+  {
+    id: 5,
+    name: 'Ciclo 6',
+    slug: 'ciclo-6',
+    courses: courses.filter((course) => course.semester === 6),
+  },
+  {
+    id: 6,
+    name: 'Ciclo 7',
+    slug: 'ciclo-7',
+    courses: courses.filter((course) => course.semester === 7),
+  },
+  {
+    id: 7,
+    name: 'Ciclo 8',
+    slug: 'ciclo-8',
+    courses: courses.filter((course) => course.semester === 8),
+  },
+  {
+    id: 8,
+    name: 'Ciclo 9',
+    slug: 'ciclo-9',
+    courses: courses.filter((course) => course.semester === 9),
+  },
+  {
+    id: 9,
+    name: 'Ciclo 10',
+    slug: 'ciclo-10',
+    courses: courses.filter((course) => course.semester === 10),
   },
 ];

@@ -1,14 +1,29 @@
-import { useContext } from 'react';
-import { CoursesContext } from '../../context/coursesContext';
-import List from '../List';
+import { useState } from 'react';
+import { terms } from '../../data';
+import { type ITerm } from '../../types/course';
+import TermCourses from '../TermCourses';
+import TermMenu from '../TermMenu';
 import styles from './MainWindow.module.css';
 
 function MainWindow() {
-  const { filteredCourses } = useContext(CoursesContext);
+  const [allTerms, setAllTerms] = useState<ITerm[]>(terms);
+  const [selectedTerm, setSelectedTerm] = useState<number>(0);
+
+  const handleTermChange = (term: ITerm) => {
+    setSelectedTerm(+term.id);
+  };
+
   return (
-    <div className={styles.Window}>
-      <List courses={filteredCourses} />
-    </div>
+    <>
+      <section className={styles.Window__content}>
+        <TermMenu
+          terms={allTerms}
+          selectedTerm={selectedTerm}
+          onTermChange={handleTermChange}
+        />
+        <TermCourses allTerms={allTerms} selectedTerm={selectedTerm} />
+      </section>
+    </>
   );
 }
 
