@@ -116,7 +116,7 @@ export const courses: ICourse[] = [
     color: { hex: '#A3D39C', name: 'green' },
     credits: 6,
     semester: 3,
-    status: 'completed',
+    status: 'in-progress',
   },
   {
     id: 14,
