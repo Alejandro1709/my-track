@@ -1,13 +1,13 @@
-import { useContext } from 'react';
-import { CoursesContext } from '../../context/coursesContext';
-import List from '../List';
+import TermMenu from '../TermMenu';
 import styles from './MainWindow.module.css';
 
 function MainWindow() {
-  const { filteredCourses } = useContext(CoursesContext);
   return (
     <div className={styles.Window}>
-      <List courses={filteredCourses} />
+      <div className={styles.Window__content}>
+        <TermMenu />
+        fg
+      </div>
     </div>
   );
 }

@@ -1,0 +1,25 @@
+.Window__header ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  background-color: #444141;
+  overflow-x: scroll;
+}
+
+.Window__header ul li {
+  flex: 1 0 0;
+  text-align: center;
+  color: white;
+  padding: 0.6rem;
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+  background-color: #444141;
+  cursor: pointer;
+  user-select: none;
+}
+
+.Window__header ul li:hover {
+  background-color: #333;
+}

@@ -7,7 +7,6 @@ import MainWindow from './components/MainWindow';
 function App() {
   return (
     <AppContainer>
-      <Sidebar />
       <Main>
         <Header />
         <MainWindow />
