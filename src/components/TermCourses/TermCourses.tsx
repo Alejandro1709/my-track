@@ -24,7 +24,6 @@ function TermCourses({ allTerms, selectedTerm }: TermCoursesProps) {
               style={{
                 textDecoration:
                   course.status === 'completed' ? 'line-through' : '',
-                cursor: course.status === 'completed' ? '' : 'pointer',
               }}
             >
               {course.name}
