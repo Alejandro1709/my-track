@@ -17,8 +17,8 @@ function handleFilterCourses(courses: ICourse[], filters: Filters) {
   const { typeFilter, statusFilter, semesterFilter } = filters;
   return courses.filter(
     (course) =>
-      course.type === typeFilter &&
-      course.status === statusFilter &&
+      course.type === typeFilter ||
+      course.status === statusFilter ||
       course.semester === semesterFilter
   );
 }
