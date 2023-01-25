@@ -8,6 +8,13 @@ export default interface ICourse {
   status: CourseStatus;
 }
 
+export interface ITerm {
+  id: number | string;
+  name: string;
+  slug: string;
+  courses: ICourse[];
+}
+
 export type CourseType =
   | 'Ciencias Básicas'
   | 'Humanidades'
