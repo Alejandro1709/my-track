@@ -1,12 +1,9 @@
-import { type ITerm } from '../../types/course';
+import useTerms from '../../hooks/useTerms';
 import styles from './TermCourses.module.css';
 
-type TermCoursesProps = {
-  allTerms: ITerm[];
-  selectedTerm: number;
-};
+function TermCourses() {
+  const { allTerms, selectedTerm } = useTerms();
 
-function TermCourses({ allTerms, selectedTerm }: TermCoursesProps) {
   return (
     <div className={styles.Window__content__main}>
       {allTerms[selectedTerm].courses.map((course) => {
