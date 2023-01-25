@@ -1,0 +1,48 @@
+import { type ITerm } from '../../types/course';
+import styles from './TermCourses.module.css';
+
+type TermCoursesProps = {
+  allTerms: ITerm[];
+  selectedTerm: number;
+};
+
+function TermCourses({ allTerms, selectedTerm }: TermCoursesProps) {
+  return (
+    <div className={styles.Window__content__main}>
+      {allTerms[selectedTerm].courses.map((course) => {
+        return course.status === 'completed' ? (
+          <div
+            key={course.id}
+            className={styles.CourseCell}
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              backgroundColor: '#eee',
+            }}
+          >
+            <h3
+              style={{
+                textDecoration:
+                  course.status === 'completed' ? 'line-through' : '',
+                cursor: course.status === 'completed' ? '' : 'pointer',
+              }}
+            >
+              {course.name}
+            </h3>
+            <span>Completed</span>
+          </div>
+        ) : (
+          <div
+            key={course.id}
+            className={styles.CourseCell}
+            style={{ backgroundColor: course.color.hex }}
+          >
+            <h3>{course.name}</h3>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+export default TermCourses;

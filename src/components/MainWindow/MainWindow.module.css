@@ -2,15 +2,6 @@
   flex: 1 0 0;
 }
 
-.Window__content {
-  /* width: 50vw; */
-  background-color: aquamarine;
-}
-
 .TermCard {
-  padding: 1rem;
-}
-
-.CourseCell {
   padding: 1rem;
 }

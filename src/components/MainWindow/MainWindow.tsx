@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { terms } from '../../data';
 import { type ITerm } from '../../types/course';
+import TermCourses from '../TermCourses';
 import TermMenu from '../TermMenu';
 import styles from './MainWindow.module.css';
 
@@ -20,33 +21,7 @@ function MainWindow() {
           selectedTerm={selectedTerm}
           onTermChange={handleTermChange}
         />
-        <div className={styles.Window__content__main}>
-          {allTerms[selectedTerm].courses.map((course) => {
-            return course.status === 'completed' ? (
-              <div
-                key={course.id}
-                className={styles.CourseCell}
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  textDecoration: 'line-through',
-                  backgroundColor: '#eee',
-                }}
-              >
-                {course.name}
-                <span>Completed</span>
-              </div>
-            ) : (
-              <div
-                key={course.id}
-                className={styles.CourseCell}
-                style={{ backgroundColor: course.color.hex }}
-              >
-                {course.name}
-              </div>
-            );
-          })}
-        </div>
+        <TermCourses allTerms={allTerms} selectedTerm={selectedTerm} />
       </section>
     </>
   );
