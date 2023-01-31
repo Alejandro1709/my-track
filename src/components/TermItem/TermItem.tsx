@@ -8,7 +8,18 @@ type TermItemProps = {
 function TermItem({ term }: TermItemProps) {
   const { handleTermChange } = useTerms();
 
-  return <li onClick={() => handleTermChange(term)}>{term.name}</li>;
+  const allCompleted = term.courses.every(
+    (course) => course.status === 'completed'
+  );
+
+  return (
+    <li
+      style={{ backgroundColor: allCompleted ? 'green' : '' }}
+      onClick={() => handleTermChange(term)}
+    >
+      {term.name}
+    </li>
+  );
 }
 
 export default TermItem;
