@@ -12,7 +12,7 @@ function Courses({ allTerms, selectedTerm }: CoursesProps) {
   return (
     <div className={styles.Window__content__main}>
       {allTerms.length > 0
-        ? allTerms[selectedTerm].courses.map((course) => {
+        ? allTerms[selectedTerm - 1].courses.map((course) => {
             return course.status === 'completed' ? (
               <CompletedCourse key={course.id} course={course} />
             ) : (
