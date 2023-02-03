@@ -1,4 +1,5 @@
 import useModal from '../../hooks/useModal';
+import type ICourse from '../../types/course';
 import styles from './Modal.module.css';
 
 type ModalProps = {
@@ -13,8 +14,8 @@ function Modal({ isOpen }: ModalProps) {
     handleModalChange();
   }
 
-  function handleAccept() {
-    console.log('Accept');
+  function handleAccept(course: ICourse) {
+    console.log('Accept', course);
   }
 
   return (
@@ -31,10 +32,7 @@ function Modal({ isOpen }: ModalProps) {
           >
             Cancelar
           </button>
-          <button
-            className={styles.Modal__content__buttons__accept}
-            onClick={handleAccept}
-          >
+          <button className={styles.Modal__content__buttons__accept}>
             Cambiar
           </button>
         </div>

@@ -12,7 +12,7 @@ export const ModalContext = createContext<ModalContextType>({
 });
 
 function ModalProvider({ children }: { children: React.ReactNode }) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleModalChange = () => setIsOpen(!isOpen);
 

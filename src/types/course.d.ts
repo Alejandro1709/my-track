@@ -1,6 +1,7 @@
 export default interface ICourse {
   id: number | string;
   name: string;
+  slug: string;
   type: CourseType;
   color: string;
   credits: number;
