@@ -3,9 +3,10 @@ import styles from './Course.module.css';
 
 type CourseProps = {
   course: ICourse;
+  onClick: () => void;
 };
 
-function CompletedCourse({ course }: CourseProps) {
+function CompletedCourse({ course, onClick }: CourseProps) {
   return (
     <div
       key={course.id}
@@ -15,6 +16,7 @@ function CompletedCourse({ course }: CourseProps) {
         justifyContent: 'space-between',
         backgroundColor: '#eee',
       }}
+      onClick={onClick}
     >
       <h3
         style={{
