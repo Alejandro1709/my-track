@@ -1,0 +1,55 @@
+.Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  user-select: none;
+}
+
+.Modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 1rem;
+  background-color: white;
+}
+
+.Modal__content__text {
+  margin: 0.5rem 0 0 0.5rem;
+}
+
+.Modal__content__buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  gap: 0.6rem;
+}
+
+.Modal__content__buttons__cancel {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.Modal__content__buttons__cancel:hover {
+  background-color: #d33226;
+}
+
+.Modal__content__buttons__accept {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+.Modal__content__buttons__accept:hover {
+  background-color: #3f9e41;
+}
