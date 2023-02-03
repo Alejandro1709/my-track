@@ -1,5 +1,5 @@
 import CompletedCourse from '../Course/CompletedCourse';
-import Course from '../Course/Course';
+import Course from '../Course';
 import styles from './Courses.module.css';
 import { type ITerm } from '../../types/course';
 
