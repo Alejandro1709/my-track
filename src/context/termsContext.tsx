@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import React, { createContext, useState } from 'react';
-import { terms } from '../data';
+import React, { createContext, useEffect, useState } from 'react';
+import { fetchTerms } from '../services/semesters';
 import { type ITerm } from '../types/course';
 
 type TermsContext = {
@@ -22,8 +22,19 @@ export const TermsContext = createContext<TermsContext>({
 });
 
 export function TermsProvider({ children }: TermsProviderProps) {
-  const [allTerms, setAllTerms] = useState<ITerm[]>(terms);
+  const [allTerms, setAllTerms] = useState<ITerm[]>([]);
   const [selectedTerm, setSelectedTerm] = useState<number>(0);
+
+  useEffect(() => {
+    fetchTerms()
+      .then((data) => {
+        setAllTerms(data);
+        setSelectedTerm(+data[0].id);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   const handleTermChange = (term: ITerm) => {
     setSelectedTerm(+term.id);

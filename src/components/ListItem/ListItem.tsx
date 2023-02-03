@@ -6,10 +6,6 @@ type ListItemProps = {
 };
 
 function ListItem({ course }: ListItemProps) {
-  const renderCourseColor = (course: ICourse) => {
-    return course.color.hex;
-  };
-
   return (
     <li
       className={
@@ -17,7 +13,7 @@ function ListItem({ course }: ListItemProps) {
           ? styles.ListItem
           : styles.ListItem__incomplete
       }
-      style={{ backgroundColor: renderCourseColor(course) }}
+      style={{ backgroundColor: `#${course.color};` }}
       role='listitem'
     >
       <h3>{course.name}</h3>

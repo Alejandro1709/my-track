@@ -2,7 +2,7 @@ export default interface ICourse {
   id: number | string;
   name: string;
   type: CourseType;
-  color: CourseColor;
+  color: string;
   credits: number;
   semester: number;
   status: CourseStatus;
@@ -25,8 +25,6 @@ export type CourseType =
   | 'Práctica de la Profesión'
   | 'Electivo'
   | 'Otro';
-
-export type CourseColor = { hex: string; name: string };
 
 export type CourseStatus =
   | 'completed'
